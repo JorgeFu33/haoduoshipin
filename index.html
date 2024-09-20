@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversario</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            color: red;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        h2 {
+            color: red;
+            font-size: 30px;
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+        }
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+            animation: move 5s infinite ease-in-out;
+        }
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(100px, 100px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz aniversario mi amor</h1>
+
+    <!-- Flores generadas -->
+    <div class="flower" style="top: 150px; left: 100px;"></div>
+    <div class="flower" style="top: 200px; left: 300px;"></div>
+    <div class="flower" style="top: 250px; left: 500px;"></div>
+    <div class="flower" style="top: 300px; left: 700px;"></div>
+    <div class="flower" style="top: 350px; left: 900px;"></div>
+
+    <h2>Te amo</h2>
+
+    <script>
+        // Animación para cada flor
+        document.querySelectorAll('.flower').forEach((flower, index) => {
+            flower.style.animationDelay = `${index * 0.5}s`;
+        });
+    </script>
+</body>
+</html>
